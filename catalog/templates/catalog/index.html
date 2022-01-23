@@ -5,6 +5,7 @@
 
 
 <h1>library Home</h1>
+<br>
   <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
   <h2>Dynamic content</h2>
   <p>The library has the following record counts:</p>
@@ -14,6 +15,8 @@
     <li><strong>Copies available:</strong> {{ num_instance_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li>
   </ul>
+
+  <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 
 
 {% endblock %}

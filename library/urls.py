@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from catalog.views import cookie_session, cookie_delete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('catalog.urls')),
+    path('testcookie/', cookie_session),
+    path('deletecookie/', cookie_delete),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 #Add URL maps to redirect the base URL to our application

@@ -17,13 +17,13 @@ class AuthorAdmin(admin.ModelAdmin):
     fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
 
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_filter = ('status', 'due_back')
+    list_filter = ('status', 'due_back', 'borrower', 'due_back', 'id')
     fieldsets = (
         (None, {
             'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back')
+            'fields': ('status', 'due_back', 'borrower', )
         }),
     )
 
