@@ -9,9 +9,11 @@
       <li>
         <a href="{% url 'book-detail' book.slug %}">{{ book.title }}</a> ({{book.author}})
       </li>
+   
     {% endfor %}
   </ul>
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
+  <a href="{% url 'book-create'  %}">Create a Book</a>
 {% endblock %}
